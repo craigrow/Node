@@ -12,14 +12,27 @@ var bl = require('bl')
 // Get the URL from the command line.
 var url = process.argv[2]
 
-var b = http.get(url, function(res) {
-	res.setEncoding('utf8');
-	res.pipe(bl(function (err, data) {
-		var raw = data.toString();
-		console.log(raw.length)
-		console.log(raw)
-	}));
-	res.on('error', console.error);
-});
+// var b = http.get(url, function(res) {
+// 	res.setEncoding('utf8');
+// 	res.pipe(bl(function (err, data) {
+// 		var raw = data.toString();
+// 		console.log(raw.length)
+// 		console.log(raw)
+// 	}));
+// 	res.on('error', console.error);
+// });
 
-b.end();
+// b.end();
+
+
+// This is the official solution, which seems a bit better,
+// but the instructions say we nee to use .end()
+http.get(url, function(res) {
+	res.pipe(bl(function (err, data) {
+		if (err)
+			return console.error(err)
+		data = data.toString()
+		console.log(data.length)
+		console.log(data)
+	}))
+})
