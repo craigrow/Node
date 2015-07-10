@@ -48,3 +48,10 @@ node_modules/bl/bl.js
 node_modules/bl/LICENSE.md
 node_modules/bl/node_modules/readable-stream/doc/wg-meetings/2015-01-30.md
 *.markdown
+node_modules/strftime/.tm_properties
+*.json
+node_modules/strftime/Changelog.md
+node_modules/strftime/millis.js
+*.md
+mystrftime.js
+node_modules/*
