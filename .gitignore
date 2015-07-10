@@ -41,3 +41,10 @@ $RECYCLE.BIN/
 Network Trash Folder
 Temporary Items
 .apdisk
+node_modules/bl/.jshintrc
+*.yml
+node_modules/bl/bl.js
+*.npmignore
+node_modules/bl/LICENSE.md
+node_modules/bl/node_modules/readable-stream/doc/wg-meetings/2015-01-30.md
+*.markdown
